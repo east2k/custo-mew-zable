@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CustoMewZable
+
+An interactive web app for creating and customizing minimalist cat designs. Built with Next.js and SVG.
+
+## Features
+
+- Customize cat appearance with different body types, eyes, ears, and tails
+- Choose from a color palette for primary color
+- Randomize button to generate random cat designs
+- Save up to 20 custom cats to browser storage
+- Export cats as PNG or SVG files
+- View and manage saved cats in a gallery
+- Dark mode support
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS v4
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) to use the app.
 
-## Learn More
+Build for production:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm run build
+pnpm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+app/              # Next.js pages and layouts
+components/       # React components (cat renderer, customization panel, modals)
+hooks/            # Custom React hooks (state management, storage, export)
+utils/            # Utility functions (storage, export, cat rendering logic)
+types/            # TypeScript type definitions
+constants/        # App constants and configuration
+```
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Select customization options from the left panel
+2. Watch your cat update in real-time
+3. Click "Randomize" to generate a random cat
+4. Save your favorite cats for later
+5. Export as PNG or SVG to download
